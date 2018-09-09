@@ -48,7 +48,7 @@ def intent_received(hermes, intent_message):
 	print(slots.assistant_name)
 	print(len(slots.assistant_name))
 
-	if intent_message.intent.intent_name == 'Joseph:askTime':
+	if intent_message.intent.intent_name == 'Joseph:askTime' and len(slots.assistant_name) > 0:
 
 		sentence = 'taine'
 		print(intent_message.intent.intent_name)
