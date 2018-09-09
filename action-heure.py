@@ -46,7 +46,7 @@ def intent_received(hermes, intent_message):
 	slots = intent_message.slots
 
 	print(slots.assistant_name)
-	print(slots.assistant_name is None)
+	print(len(slots.assistant_name))
 
 	if intent_message.intent.intent_name == 'Joseph:askTime':
 
