@@ -49,7 +49,7 @@ def intent_received(hermes, intent_message):
 	print(len(slots.assistant_name))
 	print(intent_message.intent.probability)
 
-	if intent_message.intent.intent_name == 'Joseph:askTime' and len(slots.assistant_name) > 0:
+	if intent_message.intent.intent_name == 'Joseph:askTime' and len(slots.assistant_name) > 0 and intent_message.intent.probability>0.9:
 
 		sentence = 'taine'
 		print(intent_message.intent.intent_name)
