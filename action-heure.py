@@ -45,12 +45,12 @@ def intent_received(hermes, intent_message):
 
 	if intent_message.intent.intent_name == 'Joseph:askTime':
 
-		sentence = 'Il est '
+		sentence = 'twelve'
 		print(intent_message.intent.intent_name)
 
 		now = datetime.now(timezone('Europe/Paris'))
 
-		sentence += verbalise_hour(now.hour) + " " + verbalise_minute(now.minute)
+		#sentence += verbalise_hour(now.hour) + " " + verbalise_minute(now.minute)
 		print(sentence)
 
 		# hermes.publish_continue_session(intent_message.session_id, sentence, ["Joseph:greetings"])
